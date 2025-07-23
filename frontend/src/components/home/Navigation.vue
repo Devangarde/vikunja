@@ -110,24 +110,12 @@
 			</nav>
 		</template>
 
-		<PoweredByLink
-			class="mbs-auto"
-			utm-medium="navigation"
-		/>
-
-		<div
-			v-if="!isMobile"
-			class="resize-handle"
-			@mousedown="startResize"
-			@touchstart="startResize"
-		/>
 	</aside>
 </template>
 
 <script setup lang="ts">
 import {computed} from 'vue'
 
-import PoweredByLink from '@/components/home/PoweredByLink.vue'
 import Logo from '@/components/home/Logo.vue'
 import Loading from '@/components/misc/Loading.vue'
 

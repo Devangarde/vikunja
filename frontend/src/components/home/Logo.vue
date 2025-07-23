@@ -1,58 +1,29 @@
-<script setup lang="ts">
-import { computed } from 'vue'
-import { useNow } from '@vueuse/core'
-import { useAuthStore } from '@/stores/auth'
-import { useColorScheme } from '@/composables/useColorScheme'
-
-import LogoFull from '@/assets/logo-full.svg?component'
-import LogoFullPride from '@/assets/logo-full-pride.svg?component'
-import {MILLISECONDS_A_HOUR} from '@/constants/date'
-
-const now = useNow({
-	interval: MILLISECONDS_A_HOUR,
-})
-
-const authStore = useAuthStore()
-const { isDark } = useColorScheme()
-
-const Logo = computed(() => window.ALLOW_ICON_CHANGES
-	&& authStore.settings.frontendSettings.allowIconChanges
-	&& now.value.getMonth() === 5
-	? LogoFullPride
-	: LogoFull)
-
-const CustomLogo = computed(() => {
-	const lightLogo = window.CUSTOM_LOGO_URL
-	const darkLogo = window.CUSTOM_LOGO_URL_DARK
-
-	if (!lightLogo && !darkLogo) return ''
-	if (!darkLogo) return lightLogo
-	if (!lightLogo) return darkLogo
-
-	return isDark.value ? darkLogo : lightLogo
-})
-</script>
-
 <template>
-	<div>
-		<Logo
-			v-if="!CustomLogo"
-			alt="Vikunja"
-			class="logo"
-		/>
-		<img
-			v-show="CustomLogo"
-			:src="CustomLogo"
-			alt="Vikunja"
-			class="logo"
-		>
+	<div class="logo">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 728.4 75.13">
+			<polygon class="cls-1" points="94.3 50.34 123.72 50.34 123.72 37.41 94.3 37.41 94.3 14.13 127.71 14.13 127.71 .87 79.21 .87 79.21 74.16 129.22 74.16 129.22 60.9 94.3 60.9 94.3 50.34"/>
+			<path class="cls-1" d="M22.53.87H0v73.29h22.53c22.63,0,38.59-14.98,38.59-36.65S45.05.87,22.53.87ZM21.77,60.9h-6.68V14.13h6.68c16.28,0,23.71,9.7,23.71,23.39s-7.44,23.39-23.71,23.39Z"/>
+			<path class="cls-1" d="M401.76,48.19h17.68v10.78c-3.77,1.83-9.59,2.69-14.34,2.69-15.41,0-24.25-10.45-24.25-24.14s8.62-23.93,21.88-23.93c8.51,0,12.72,2.91,16.38,6.68l10.24-10.13C423.31,3.24,414.69,0,402.73,0c-22.1,0-37.4,15.85-37.4,37.51s15.85,37.62,39.77,37.62c13.36,0,23.93-5.07,28.13-8.52v-31.69h-31.47v13.26Z"/>
+			<path class="cls-1" d="M580.65,28.57c0-17.89-12.29-27.7-32.77-27.7h-20.26v73.29h15.09v-18.21h5.17c1.4,0,2.91-.11,4.31-.32l12.07,18.54h17.46l-15.2-22.85c9.05-4.09,14.12-11.32,14.12-22.74ZM547.46,42.8h-4.74V14.13h4.74c12.07,0,17.68,4.1,17.68,14.44s-5.39,14.23-17.68,14.23Z"/>
+			<polygon class="cls-1" points="693.48 60.9 693.48 50.34 722.91 50.34 722.91 37.41 693.48 37.41 693.48 14.13 726.89 14.13 726.89 .87 678.39 .87 678.39 74.16 728.4 74.16 728.4 60.9 693.48 60.9"/>
+			<path class="cls-1" d="M621.71.87h-22.53v73.29h22.53c22.63,0,38.59-14.98,38.59-36.65S644.24.87,621.71.87ZM620.95,60.9h-6.68V14.13h6.68c16.28,0,23.71,9.7,23.71,23.39s-7.44,23.39-23.71,23.39Z"/>
+			<polygon class="cls-1" points="238.26 0 236.86 0 230.42 14.8 230.42 14.82 204.55 74.17 218.84 74.17 237.56 31.2 256.28 74.17 270.59 74.17 244.71 14.8 238.26 0"/>
+			<polygon class="cls-1" points="193.86 0 175.14 42.97 156.41 0 142.1 0 167.99 59.37 174.44 74.17 175.83 74.17 182.28 59.37 182.28 59.35 208.15 0 193.86 0"/>
+			<polygon class="cls-1" points="480 0 478.6 0 472.15 14.8 472.15 14.82 446.29 74.17 460.58 74.17 479.3 31.2 498.02 74.17 512.33 74.17 486.45 14.8 480 0"/>
+			<polygon class="cls-1" points="333 .87 333 21.17 333 31.59 333 42.11 325.35 34.93 325.35 34.93 288.38 .22 286.87 .22 286.87 74.16 300.99 74.16 300.99 53.09 300.99 43.44 300.99 32.93 312.79 44.11 312.94 44.14 345.62 74.81 347.12 74.81 347.12 .87 333 .87"/>
+		</svg>
 	</div>
 </template>
 
 <style lang="scss" scoped>
-.logo {
-	color: var(--logo-text-color);
-	max-inline-size: 168px;
-	max-block-size: 48px;
+.logo svg {
+	width: 168px;
+}
+.logo .cls-1 {
+	fill: #4a4a49;
+	stroke-width: 0px;
+}
+[class=dark] .logo .cls-1 {
+	fill: #fff !important;
 }
 </style>

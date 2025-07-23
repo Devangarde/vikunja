@@ -135,7 +135,7 @@
 		},
 		"common": {
 			"have_nice_day": "Buona giornata!",
-			"copy_url": "Se il pulsante qui sopra non funziona, copia l'Url qui sotto e incollalo nella barra degli indirizzi del tuo browser:",
+			"copy_url": "Se il collegamento non dovesse funzionare, copia l'Url qui sotto e incollalo nella barra degli indirizzi del tuo browser:",
 			"actions": {
 				"open_task": "Apri attività",
 				"open_vikunja": "Apri Vikunja",
