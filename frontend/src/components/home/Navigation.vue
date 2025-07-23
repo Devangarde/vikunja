@@ -109,17 +109,12 @@
 			</nav>
 		</template>
 
-		<PoweredByLink
-			class="mt-auto"
-			utm-medium="navigation"
-		/>
 	</aside>
 </template>
 
 <script setup lang="ts">
 import {computed} from 'vue'
 
-import PoweredByLink from '@/components/home/PoweredByLink.vue'
 import Logo from '@/components/home/Logo.vue'
 import Loading from '@/components/misc/Loading.vue'
 

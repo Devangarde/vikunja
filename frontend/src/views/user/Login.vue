@@ -126,6 +126,7 @@
 					{{ $t('user.auth.createAccount') }}
 				</RouterLink>
 			</p>
+			<p class="mt-2"><a href="/password">Password dimenticata</a></p>
 		</form>
 
 		<div

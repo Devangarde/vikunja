@@ -25,7 +25,6 @@
 					>
 						{{ title }}
 					</h2>
-					<ApiConfig v-if="showApiConfig" />
 					<Message
 						v-if="motd !== ''"
 						class="is-hidden-tablet mb-4"
@@ -48,7 +47,6 @@ import {useI18n} from 'vue-i18n'
 import Logo from '@/components/home/Logo.vue'
 import Message from '@/components/misc/Message.vue'
 import Legal from '@/components/misc/Legal.vue'
-import ApiConfig from '@/components/misc/ApiConfig.vue'
 
 import {useTitle} from '@/composables/useTitle'
 import {useConfigStore} from '@/stores/config'
@@ -70,7 +68,6 @@ useTitle(() => title.value)
 
 <style lang="scss" scoped>
 .no-auth-wrapper {
-	background: var(--site-background) url('@/assets/llama.svg?url') no-repeat fixed bottom left;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -149,7 +146,10 @@ useTitle(() => title.value)
 
 .logo {
 	max-width: 100%;
-	margin: 1rem 0;
+	display: flex;
+	margin: 0;
+	height: 64px !important;
+	align-items: center;
 }
 
 .image-title {

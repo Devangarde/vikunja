@@ -21,7 +21,6 @@
 			</h1>
 			<div class="box has-text-left view">
 				<RouterView />
-				<PoweredByLink utm-medium="link_share" />
 			</div>
 		</div>
 	</div>
@@ -34,7 +33,6 @@ import {useBaseStore} from '@/stores/base'
 import {useRoute} from 'vue-router'
 
 import Logo from '@/components/home/Logo.vue'
-import PoweredByLink from './PoweredByLink.vue'
 import {useProjectStore} from '@/stores/projects'
 import {useLabelStore} from '@/stores/labels'
 import {PROJECT_VIEW_KINDS} from '@/modelTypes/IProjectView'
