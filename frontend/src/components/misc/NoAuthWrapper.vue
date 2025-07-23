@@ -151,4 +151,9 @@ useTitle(() => title.value)
 	height: 64px !important;
 	align-items: center;
 }
+
+.image-title {
+	color: hsl(0deg, 0%, 100%);
+	font-size: 2.5rem;
+}
 </style>
