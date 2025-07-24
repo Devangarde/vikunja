@@ -34,12 +34,12 @@
 	"user": {
 		"auth": {
 			"username": "Nome utente",
-			"usernameEmail": "Nome utente o indirizzo e-mail",
-			"usernamePlaceholder": "es. frederick",
+			"usernameEmail": "Indirizzo e-mail",
+			"usernamePlaceholder": "E-mail",
 			"email": "Indirizzo e-mail",
 			"emailPlaceholder": "per es. frederic{'@'}vikunja.io",
 			"password": "Password",
-			"passwordPlaceholder": "es. ••••••••••••",
+			"passwordPlaceholder": "Password",
 			"forgotPassword": "Password dimenticata?",
 			"resetPassword": "Reimposta la tua password",
 			"resetPasswordAction": "Inviami il link per reimpostare la password",

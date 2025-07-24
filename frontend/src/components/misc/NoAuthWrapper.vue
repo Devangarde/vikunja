@@ -13,9 +13,6 @@
 				<Message v-if="motd !== ''">
 					{{ motd }}
 				</Message>
-				<h2 class="image-title">
-					{{ $t('misc.welcomeBack') }}
-				</h2>
 			</section>
 			<section class="content">
 				<div>
@@ -150,10 +147,5 @@ useTitle(() => title.value)
 	margin: 0;
 	height: 64px !important;
 	align-items: center;
-}
-
-.image-title {
-	color: var(--white);
-	font-size: 2.5rem;
 }
 </style>
