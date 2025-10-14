@@ -61,8 +61,8 @@ import {useLabelStore} from '@/stores/labels'
 import {useAuthStore} from '@/stores/auth'
 
 import Logo from '@/components/home/Logo.vue'
-import {useProjectStore} from '@/stores/projects'
-import {useLabelStore} from '@/stores/labels'
+import BaseButton from '@/components/base/BaseButton.vue'
+import Message from '@/components/misc/Message.vue'
 import {PROJECT_VIEW_KINDS} from '@/modelTypes/IProjectView'
 
 const baseStore = useBaseStore()
