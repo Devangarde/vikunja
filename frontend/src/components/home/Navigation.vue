@@ -141,7 +141,7 @@ const configStore = useConfigStore()
 
 const timeTrackingEnabled = computed(() => configStore.isProFeatureEnabled(PRO_FEATURE.TIME_TRACKING))
 
-const {sidebarWidth, isResizing, startResize, isMobile} = useSidebarResize()
+const {sidebarWidth, isResizing} = useSidebarResize()
 
 // Cast readonly arrays to mutable type - the arrays are not actually mutated by the component
 const projects = computed(() => projectStore.notArchivedRootProjects as IProject[])
