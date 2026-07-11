@@ -567,7 +567,7 @@ func TestConversationalMail(t *testing.T) {
 		assert.Contains(t, mailopts.HTMLMessage, "background: #f3f4f6")
 		assert.Contains(t, mailopts.HTMLMessage, "font-family: 'Open Sans'")
 		assert.Contains(t, mailopts.HTMLMessage, "width: 600px")
-		assert.Contains(t, mailopts.HTMLMessage, "height: 75px")
+		assert.Contains(t, mailopts.HTMLMessage, "width: 168px")
 
 		// Should HAVE logo in formal emails
 		assert.Contains(t, mailopts.HTMLMessage, "logo.png")
