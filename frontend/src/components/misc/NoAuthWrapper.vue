@@ -104,7 +104,6 @@ useTitle(() => title.value)
 	}
 
 	@media screen and (min-width: $tablet) {
-		background: url("@/assets/no-auth-image.jpg") no-repeat bottom/cover;
 		position: relative;
 
 		&.has-message {
@@ -150,10 +149,5 @@ useTitle(() => title.value)
 	margin: 0;
 	height: 64px !important;
 	align-items: center;
-}
-
-.image-title {
-	color: hsl(0deg, 0%, 100%);
-	font-size: 2.5rem;
 }
 </style>
