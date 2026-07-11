@@ -104,6 +104,7 @@ useTitle(() => title.value)
 	}
 
 	@media screen and (min-width: $tablet) {
+		background: url("@/assets/no-auth-image.jpg") no-repeat bottom/cover;
 		position: relative;
 
 		&.has-message {

@@ -15,7 +15,11 @@ const logoSrc = '/logo-bianco_2.png'
 
 <style lang="scss" scoped>
 .logo-img {
-	max-inline-size: 100%;
+	/* Fixed width like the previous SVG wordmark (.logo svg { width: 168px }),
+	   which took priority over the width/height attributes callers pass
+	   through (Navigation.vue, NoAuthWrapper.vue) so the logo renders at a
+	   consistent size everywhere instead of being stretched to fit them. */
+	inline-size: 168px;
 	block-size: auto;
 }
 </style>
