@@ -6,19 +6,21 @@ const logoSrc = '/logo-bianco_2.png'
 </script>
 
 <template>
-	<img
-		:src="logoSrc"
-		alt="Vikunja"
-		class="logo-img"
-	>
+	<div class="logo">
+		<img
+			:src="logoSrc"
+			alt="Vikunja"
+			class="logo-img"
+		>
+	</div>
 </template>
 
 <style lang="scss" scoped>
+/* Kept as a wrapper (not the img itself) so callers passing class="logo"
+   (e.g. NoAuthWrapper.vue's height: 64px !important) size/center this
+   container instead of forcing width and height directly onto the img,
+   which stretched it out of its aspect ratio. */
 .logo-img {
-	/* Fixed width like the previous SVG wordmark (.logo svg { width: 168px }),
-	   which took priority over the width/height attributes callers pass
-	   through (Navigation.vue, NoAuthWrapper.vue) so the logo renders at a
-	   consistent size everywhere instead of being stretched to fit them. */
 	inline-size: 168px;
 	block-size: auto;
 }
